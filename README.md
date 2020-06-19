@@ -1,4 +1,4 @@
 # practice
-Rust
-Security
+Rust,
+Security,
 etc...
