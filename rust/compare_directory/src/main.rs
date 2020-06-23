@@ -47,19 +47,31 @@ fn check(a: &[String], b: &[String]) -> Vec<String>{
     }
 c
         }
+fn started(a:PathBuf) -> Vec<String> {
+    let a = scan(a);
+    let a = change(a);
+    a
+}
+fn read() -> PathBuf{
+    let mut a = String::new();
+    io::stdin().read_line(&mut a)
+        .expect("location error");
+    let a = &a[..a.len()-1];
+    let a = PathBuf::from(a);
+a
+}
 fn main(){
-    let path1 = PathBuf::from(r"/etc/");
-    let path2 = PathBuf::from(r"/home/luz");
-    let path1 = scan(path1);
-    let path1 = change(path1);
-    let path2 = scan(path2);
-    let path2 = change(path2);
+
+    let path1 = read();
+    let path2 = read();
+    let path1 = started(path1);
+    let path2 = started(path2);
     let sum = do_match(&path1,&path2);
     let mut result = Vec::new();
     match sum {
         true => println!("same"),
         false => result= check(&path1,&path2),
-        _=> panic!("wtf"),
+        _=> panic!("what makes something bad"),
     }
     println!("{:?}",result);
 }
