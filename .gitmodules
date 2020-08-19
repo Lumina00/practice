@@ -1,3 +1,6 @@
 [submodule "rust"]
 	path = rust
 	url = https://github.com/Lumina00/practice-rust
+[submodule "security"]
+	path = security
+	url = https://github.com/Lumina00/practice-security
