@@ -4,6 +4,6 @@
 [submodule "security"]
 	path = security
 	url = https://github.com/Lumina00/practice-security
-[submodule "practice-cpp"]
-	path = practice-cpp
+[submodule "cpp"]
+	path = cpp
 	url = https://github.com/Lumina00/practice-cpp
